@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball Scorecard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.3.4/gridlex.min.css" integrity="sha512-qKS/p8t2fstejgMI7eISnhmfAQvjNjk+Fp6yD+qGWfG0CGURR9MZV86/pMy6yc07wZmGyydy/nPwdQxPw9ePNg==" crossorigin="anonymous" />
     <link href="http://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container padded">
-        <div>
-            <h3> HOME </h3>
-            <div class="score padded"> 
-                <span> 0 </span>
+    <div class="grid container padded">
+        <div class="col-6_sm-12 grid center">
+            <h3 class="col-12 center"> HOME </h3>
+            <div class="score padded col-5_md-9_sm-12"> 
+                <h2 id="home-score"> 0 </h2>
             </div>
-            <button> + 1 </button>
-            <button> + 2 </button>
-            <button> + 3 </button>
+            <div class="col-12">
+                <button id="home-score-btn-1" onclick="increaseHomeScoreOne()"> + 1 </button>
+                <button id="home-score-btn-2" onclick="increaseHomeScoreTwo()"> + 2 </button>
+                <button id="home-score-btn-3" onclick="increaseHomeScoreThree()"> + 3 </button>
+            </div>
+            </div>
+        <div class="col-6_sm-12 grid center">
+            <h3 class="col-12 center"> GUEST </h3>
+            <div class="score padded col-5_md-9_sm-12"> 
+                <h2 id="guest-score"> 0 </h2>
+            </div>
+            <div class="col-12">
+                <button id="guest-score-btn-1" onclick="increaseGuestScoreOne()"> + 1 </button>
+                <button id="guest-score-btn-2" onclick="increaseGuestScoreTwo()"> + 2 </button>
+                <button id="guest-score-btn-3" onclick="increaseGuestScoreThree()"> + 3 </button>
         </div>
-        <div>
-            <h3> GUEST </h3>
-            <div class="score padded"> 
-                <span> 0 </span>
-            </div>
-            <button> + 1 </button>
-            <button> + 2 </button>
-            <button> + 3 </button>
         </div>
     </div>
     
